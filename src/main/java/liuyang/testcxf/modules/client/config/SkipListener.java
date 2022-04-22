@@ -17,7 +17,8 @@ import java.security.cert.X509Certificate;
  * @author liuyang(wx)
  * @since 2022/3/23
  */
-@Component
+@Deprecated
+//@Component
 public class SkipListener implements ClientLifeCycleListener {
 
     @Override
@@ -37,6 +38,7 @@ public class SkipListener implements ClientLifeCycleListener {
     @Override
     public void clientDestroyed(Client client) {
         // Do Nothing
+        //client.destroy();
     }
 
     private class TrustAllManager implements X509TrustManager {
